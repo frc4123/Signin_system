@@ -70,10 +70,7 @@ echo -ne "\033]0;Tribe Robotics Signin System\007"
 #Default in/out value is 'In'
 inorout="In"
 
-xdotool key F11
-
 status
-
 
 done
 

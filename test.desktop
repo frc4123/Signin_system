@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=startsignin
+Icon=/home/administrator/Desktop/Signin_system/4123logo.png
+Exec='/home/administrator/Desktop/Signin_system/frc4123signin.sh'
+Terminal=true
+GenericName[en_US.UTF-8]=Starts the 4123 sign in service
