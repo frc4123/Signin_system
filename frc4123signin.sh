@@ -4,7 +4,7 @@
 #and improved by Trevor Peitzman '19 for Tribe Robotics
 #FRC team 4123 of Saint John Bosco High School.
 #Created 7/10/2016
-#Last Revised 8/15/2016
+#Last Revised 1/21/2017
 
 
 #Init function to call for signing in and or out
@@ -42,6 +42,10 @@ status () {
   elif [ "$id" = "exit" ]; then
   	exit
   
+  # Check that it's an ID by ensuring it's fewer than 6 characters. We'll have to change this by 2096..
+  elif ((${#id} > 5)); then
+    echo -e "This doesn't seem to be a valid student ID. ${RED}Please try agian.${NC}"
+
   else
      #Submits a form response to google forms, 
      #which then lands in a spreadsheet in the shared 
@@ -60,6 +64,7 @@ status
 
 #gnome-terminal --window --full-screen
 
+RED='\033[1;91m'
 YLW='\033[1;33m'
 LBLU='\033[0;34m'
 NC='\033[0m'
