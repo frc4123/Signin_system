@@ -3,8 +3,8 @@
 #Written by Adrian Campos '16. Translated into bash 
 #and improved by Trevor Peitzman '19 for Tribe Robotics
 #FRC team 4123 of Saint John Bosco High School.
-#Created 7/10/2016
-#Last Revised 1/21/2017
+#Created 07/10/2016
+#Last Revised 01/08/2017
 
 
 #Init function to call for signing in and or out
@@ -12,7 +12,7 @@
 status () {
 
   #
-  echo -ne "${LBLU}Scan Student ID Barcode to sign $inorout>${NC} " #"$inorout"> "
+  echo -ne "${LBLU}Scan Student ID Barcode to sign ${YLW}$inorout${LBLU}>${NC} " #"$inorout"> "
   read id
 
   if [ "$id" = "4123KEY_IN" ]; then 
@@ -65,7 +65,7 @@ status
 #gnome-terminal --window --full-screen
 
 RED='\033[1;91m'
-YLW='\033[1;33m'
+YLW='\e[38;5;184m'
 LBLU='\033[0;34m'
 NC='\033[0m'
 
