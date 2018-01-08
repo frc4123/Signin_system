@@ -69,13 +69,16 @@ YLW='\e[38;5;184m'
 LBLU='\033[0;34m'
 NC='\033[0m'
 
+#Attempt Full-Screen
+mate-terminal --window --full-screen
+
 #Renames terminal window to "Tribe Robotics Signin System"
 echo -ne "\033]0;Tribe Robotics Signin System\007"
 
 #Default in/out value is 'In'
 inorout="In"
 
-xdotool key F11
+#xdotool key F11
 
 status
 
