@@ -38,9 +38,12 @@ status () {
 	echo "You have just" $opnclse "a meeting. Thank you for your leadership."
 	curl -s "https://docs.google.com/forms/d/1P2WXn_4jarH4folreSVn2rj66i_e1mdQJUC0AG7r5Wg/formResponse?ifq&entry.852535003=$id&entry.1927113828=$inorout&submit=Submit" > /dev/null
 	
-  
+  # Other terminal commands to populate into our program
   elif [ "$id" = "exit" ]; then
   	exit
+	
+  elif [ "$id" = "clear" ] || [ "$id" = "clc" ]; then
+  	clear
   
   # Check that it's an ID by ensuring it's fewer than 6 characters. We'll have to change this by 2096..
   elif ((${#id} > 5)); then
